@@ -1,8 +1,13 @@
 server:
-  port: 8010
+  port: 8090
 spring:
   application:
     name: order-service
   cloud:
     nacos:
-      server-addr:
+      discovery:
+        #namespace: 13484140-5de5-45d0-91a1-1504132e25c6
+        server-addr: 39.103.124.8:8848
+stock-service:
+  ribbon:
+    NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule

@@ -5,6 +5,7 @@
     <modules>
         <module>order</module>
         <module>stock</module>
+
     </modules>
 <!--    <parent>-->
 <!--        <groupId>org.springframework.boot</groupId>-->
@@ -18,11 +19,17 @@
     <name>alibaba</name>
     <packaging>pom</packaging>
     <description>Demo project for Spring Boot</description>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.3.2.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
    <!--version管理 -->
     <properties>
         <java.version>1.8</java.version>
-        <spring.cloud.albaba.version>2.2.6.RELEASE</spring.cloud.albaba.version>
-        <springboot.version>2.3.2.RELEASE</springboot.version>
+        <spring.cloud.albaba.version>2.2.5.RELEASE</spring.cloud.albaba.version>
+
     </properties>
     <dependencies>
         <dependency>
@@ -47,14 +54,16 @@
                     <scope>import</scope>
                 </dependency>
                 <!--springboot版本管理，通过dependency继承 -->
+
+                <!--引入springcloud的版本-->
                 <dependency>
-                    <groupId>org.springframework.boot</groupId>
-                    <artifactId>spring-boot-starter-parent</artifactId>
-                    <version>${springboot.version}</version>
+                    <groupId>org.springframework.cloud</groupId>
+                    <artifactId>spring-cloud-dependencies</artifactId>
+                    <version>Hoxton.SR8</version>
                     <type>pom</type>
                     <scope>import</scope>
                 </dependency>
-            </dependencies>
+          </dependencies>
         </dependencyManagement>
     <build>
         <plugins>

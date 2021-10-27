@@ -1,2 +1,10 @@
 server:
-  port: 8011
+  port: 8091
+spring:
+  application:
+    name: stock-service
+  cloud:
+    nacos:
+      discovery:
+        #namespace: 13484140-5de5-45d0-91a1-1504132e25c6
+        server-addr: 39.103.124.8:8848

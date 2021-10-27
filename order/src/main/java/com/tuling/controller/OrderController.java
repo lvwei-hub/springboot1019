@@ -1,7 +1,6 @@
-package com.controller;
+package com.tuling.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -18,12 +17,13 @@ public class OrderController {
     RestTemplate restTemplate;
     @RequestMapping("/add")
     public String add() {
-        String forObject = restTemplate.getForObject("http://localhost:8011/stock/reduct", String.class);
+        System.out.println("jinru");
+        String forObject = restTemplate.getForObject("http://stock-service/stock/reduct", String.class);
 
         System.out.println("下单成功");
         return "hello"+forObject;
     }
 
-    ;
+
 
 }
