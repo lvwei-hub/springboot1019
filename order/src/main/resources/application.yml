@@ -11,3 +11,13 @@ spring:
 stock-service:
   ribbon:
     NFLoadBalancerRuleClassName: com.alibaba.cloud.nacos.ribbon.NacosRule
+#springboot 默认级别是info大于debug所以要指定
+logging:
+  level:
+    com.tuling.openfeign: debug
+#fegin局部日志
+#feign:
+#  client:
+#    config:
+#      stock-service:
+#        loggerLevel: FULL

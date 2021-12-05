@@ -1,0 +1,9 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: order-sentinel
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080

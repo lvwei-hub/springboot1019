@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+
+    function a(){
+        $.ajax({url:"http://localhost:8099/order-service/order/add",success:function(result){
+            alert(result);
+
+            }});
+    }
+
+
+
+    </script>
+</head>
+<body>
+<button id="s" onclick="a()">发起ajax</button>
+</body>
+</html>

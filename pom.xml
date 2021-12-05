@@ -5,6 +5,11 @@
     <modules>
         <module>order</module>
         <module>stock</module>
+        <module>config</module>
+        <module>order-sentinel</module>
+        <module>seata-order</module>
+        <module>springcloud-gateway</module>
+        <module>redis</module>
 
     </modules>
 <!--    <parent>-->
